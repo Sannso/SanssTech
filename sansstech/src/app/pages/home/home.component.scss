@@ -1,0 +1,145 @@
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 10%;
+    max-width: 1300px;
+
+    &__fixinfo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        max-width: 550px;
+
+        &-title{
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 0;
+        }
+
+        &-description{
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        &-propiedad{
+            color: #0077ED;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        &-text{
+            color: white;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        &-butt{
+            margin-top: 50px;
+            ::ng-deep .p-button{
+                border-radius: 3rem;
+                font-size: 15px;
+            }
+        }
+    }
+
+    &__ventajas{
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 70px;
+        gap: 20px;
+
+        &-card{
+            ::ng-deep .p-card{
+                width: 330px;
+                height: 180px;
+                backdrop-filter: blur(10px);
+                background-color: rgba(95, 94, 94, 0.336);
+
+                ::ng-deep .p-card-body{
+                    height: -webkit-fill-available;
+                }
+
+                ::ng-deep .p-card-content{
+                    padding: 0;
+                }
+
+            }
+
+            
+
+            &--titleicon{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+
+            i{
+                color: #0077ED;
+                font-size: 35px;
+            }
+
+            &--title{
+                margin: 0;
+                color: rgba(252, 248, 248, 0.815);
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            
+
+            &--desc{
+                color: rgba(194, 194, 194, 0.815);
+            }
+        }
+    }
+
+
+    &__whyTitle{
+        margin-top: 200px;
+        color: rgba(252, 248, 248, 0.815);
+        font-size: 60px;
+        font-weight: bold;
+
+        i{
+            font-size: 60px;
+            color: #0077ED;
+        }
+    }
+
+    &__why{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+
+        img{
+            border-radius: 2rem;
+            height: 280px;
+            width: auto;
+        }
+
+        &-text{
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+
+            &--desc{
+                color: rgba(252, 248, 248, 0.815);
+                font-size: 15px;
+            }
+        }
+    }
+}

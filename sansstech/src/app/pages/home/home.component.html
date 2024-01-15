@@ -1,0 +1,42 @@
+<app-header></app-header>
+
+<section class="body">
+
+    <section class="body__fixinfo">
+        <section class="body__info">
+            <p class="body__info-title">Nombre del Software</p>
+            <p class="body__info-description">Sistema de gestion administrativa para</p>
+            <p class="body__info-propiedad">{{propiedad}}</p>
+            <p class="body__info-text">Aprovecha el poder de simplificar todas tus tareas de 
+                administratición y comunicación, conectando administradores, propietarios y residentes.
+                 Todo desde un solo lugar</p>
+            <p-button class="body__info-butt" label="Comenienza ahora!. Contacta con nosotros"></p-button>
+        </section>
+    
+        <section class="body__ventajas">
+            @for (data of cards; track data.id){
+                <p-card class="body__ventajas-card">
+                    <section class="body__ventajas-card--titleicon">
+                        <i class="pi {{data.icon}}"></i>
+                        <p class="body__ventajas-card--title"> {{data.title}} </p>
+                    </section>
+                    <p class="body__ventajas-card--desc"> {{data.description}} </p>
+                </p-card>
+            }
+        </section>
+    </section>
+
+    <p class="body__whyTitle">¿Por qué elegir NAME? <i class="pi pi-chevron-down"></i></p>
+
+    <section class="body__why">
+        <img src="assets/images/home1.jpg" alt="Imagen porque elegirnos">
+        <section class="body__why-text">
+            <p class="body__why-text--desc">NAME simplifica la gestión administrativa y permite reducir costos
+                 al integrar la gestión de la administración y la comunicación en un único sistema.</p>
+            <p class="body__why-text--desc">La plataforma tambien sirve para los residentes y a través de este pueden recibir comunicados, enviar PQRS, participar en votaciones online, reservar zonas comunes, ¡y mucho más!</p>
+            <!-- <p class="body__why-text--desc">Además, integra un sistema de citofonía virtual que conecta a los guardas de seguridad y residentes, brindando un control mayor y comodidad.</p> -->
+        </section>
+    </section>
+</section>
+
+<app-footer></app-footer>

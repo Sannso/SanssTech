@@ -1,0 +1,47 @@
+.header{
+    &__title{
+        font-weight: bold;
+        font-size: 25px;
+        color: white;
+    }
+
+    &__buttons{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 30px;
+
+        button{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            height: 3rem;
+            width: 3rem;
+            border-radius: 25px;
+
+            &:hover{
+                background-color: rgba(255, 255, 255, 0.301);
+                transition: all;
+                transition-duration: 200ms;
+            }
+
+            i{
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__endbutton{
+        display: flex;
+
+        &-butt{
+            ::ng-deep .p-button{
+                border-radius: 3rem;
+                font-size: 12px;
+            }
+        }
+        
+    }
+}
+
