@@ -1,23 +1,34 @@
-<section class="header">
-    <p-toolbar [style]="{'border': '0px' , 'border-radius': '3rem', 'background-image': 'linear-gradient(to right, var(--surface-700), var(--surface-900))' }">
-        
-        <ng-template pTemplate="start">
-            <span class="header__title">SanssTech</span>
-        </ng-template>
+@if (!isMobileView) {
+    <section class="header">
+        <p-toolbar [style]="{'border': '0px' , 'border-radius': '3rem', 'background-image': 'linear-gradient(to right, var(--surface-700), var(--surface-900))' }">
+            
+            <ng-template pTemplate="start">
+                <span class="header__title">SanssTech</span>
+            </ng-template>
+    
+            <ng-template pTemplate="center">
+                <div class="header__buttons">
+                    <button class="p-link"><i class="pi pi-home"></i></button>
+                    <button class="p-link"><i class="pi pi-user"></i></button>
+                    <button class="p-link"><i class="pi pi-search"></i></button>
+                </div>
+            </ng-template>
+    
+            <ng-template pTemplate="end">
+                <div class="header__endbutton">
+                    <p-button class="header__endbutton-butt" label="Consultar software personalizado"></p-button>
+                </div>
+            </ng-template>
+    
+        </p-toolbar>
+    </section>
+}@else{
+    <section class="header">
+        <span class="header__title">SanssTech</span>
+        <section class="header__options">
+            <button class="header__options-btn" #btn type="button" pButton icon="pi pi-bars" (click)="menu.toggle($event)"></button>
+            <p-tieredMenu class="header__options-desplegable" #menu [model]="items" [popup]="true"></p-tieredMenu>
+        </section>
+    </section>
+}
 
-        <ng-template pTemplate="center">
-            <div class="header__buttons">
-                <button class="p-link"><i class="pi pi-home"></i></button>
-                <button class="p-link"><i class="pi pi-user"></i></button>
-                <button class="p-link"><i class="pi pi-search"></i></button>
-            </div>
-        </ng-template>
-
-        <ng-template pTemplate="end">
-            <div class="header__endbutton">
-                <p-button class="header__endbutton-butt" label="Consultar software personalizado"></p-button>
-            </div>
-        </ng-template>
-
-    </p-toolbar>
-</section>
