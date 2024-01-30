@@ -9,7 +9,7 @@
             <p class="body__info-text">Aprovecha el poder de simplificar todas tus tareas de 
                 administratición y comunicación, conectando administradores, propietarios y residentes.
                  Todo desde un solo lugar</p>
-            <p-button class="body__info-butt" label="Comienza ahora!. Contacta con nosotros"></p-button>
+            <p-button class="body__info-butt" label="Comienza ahora!. Contacta con nosotros" routerLink="/contacto"></p-button>
         </section>
         
         <section class="body__ventajas">
@@ -39,4 +39,11 @@
 
 </section>
 
-<app-footer></app-footer>
+@defer (on viewport){
+    <app-footer></app-footer> <!-- Se carga cuando ya se haya terminado de renderizar la pagina -->
+} @placeholder {
+    <p>.</p> <!-- Es lo que se muestra cuando se llega a ver el elemento en pantalla (on viewport)
+                 y no se ha cargado el footer. Es cuando aun no se ve el elemento, pero tampoco se esta cargando -->
+} @loading {
+    <p>cargando footer</p> <!-- Loading cuando se ve el elemento en pantalla pero no ha cargado -->
+}

@@ -1,0 +1,48 @@
+<app-header></app-header>
+
+<section class="contacto">
+
+    <section class="contacto__info">
+        <article class="contacto__info-247">
+            <p class="contacto__info-247--title">
+                <i class="pi pi-comments"></i>
+                 Comunícate 
+                 <span>24/7</span> 
+                 con nuestro equipo
+            </p>
+
+            <p class="contacto__info-247--text">Con SanssTech cuentas con soporte gratis e ilimitado.
+                 Avanza a tu propio ritmo!</p>
+        </article>
+        <article class="contacto__info-llamanos">
+            <i class="pi pi-whatsapp"></i>
+            <article class="contacto__info-llamanos--info">
+                <p class="contacto__info-llamanos--info-title">Llámanos al +57 318 6797096</p>
+                <p class="contacto__info-llamanos--info-text">De lunes a viernes de 8:00 am a 5:30 pm</p>
+            </article>
+        </article>
+    </section>
+
+    <section class="contacto__contactar">
+        <p class="contacto__contactar-title">Empieza ahora</p>
+        <p class="contacto__contactar-text">Potencia tu trabajo como administrador con el control total
+             de tu informacion de forma muy facil de ver
+             y la interactividad con los residentes de manera muy sencilla</p>
+        <p-button class="contacto__contactar-butt" label="Contactar" (onClick)="openWpp()"></p-button>
+        <article class="contacto__contactar-icons">
+            <i class="pi pi-shield"></i>
+            <i class="pi pi-whatsapp"></i>
+            <i class="pi pi-sync"></i>
+        </article>
+    </section>
+
+</section>
+
+@defer (on viewport){
+    <app-footer></app-footer> <!-- Se carga cuando ya se haya terminado de renderizar la pagina -->
+} @placeholder {
+    <p>.</p> <!-- Es lo que se muestra cuando se llega a ver el elemento en pantalla (on viewport)
+                 y no se ha cargado el footer. Es cuando aun no se ve el elemento, pero tampoco se esta cargando -->
+} @loading {
+    <p>cargando footer</p> <!-- Loading cuando se ve el elemento en pantalla pero no ha cargado -->
+}

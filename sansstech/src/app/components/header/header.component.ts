@@ -8,6 +8,7 @@ import { TieredMenuModule } from 'primeng/tieredmenu';
 import { BreakpointObserver, BreakpointState, LayoutModule } from '@angular/cdk/layout';
 
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     CardModule,
     FormsModule,
     TieredMenuModule,
-    LayoutModule
+    LayoutModule,
+    RouterLink
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
